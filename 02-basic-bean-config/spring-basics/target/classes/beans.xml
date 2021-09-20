@@ -7,12 +7,25 @@
 
     <!-- bean definitions here -->
     <bean id="person" class="classes.Person" scope="singleton" init-method="onCreate"
-            destroy-method="onDestroy">
+            destroy-method="onDestroy" factory-method="getInstance">
         <constructor-arg value="123" name="id" type="int"></constructor-arg>
         <constructor-arg value="Humbert Monkey" name="name" type="String"></constructor-arg>
         <property name="taxId" value="33"></property>
         <!-- Dependency injection - Reference to the address bean -->
         <property name="address" ref="address"></property>
+    </bean>
+
+    <bean id="person2" class="classes.Person" scope="singleton" init-method="onCreate"
+            destroy-method="onDestroy" factory-bean="personFactory" factory-method="createPerson">
+        <constructor-arg value="456" name="id" type="int"></constructor-arg>
+        <constructor-arg value="Oswald Monkey" name="name" type="String"></constructor-arg>
+        <property name="taxId" value="33"></property>
+        <!-- Dependency injection - Reference to the address bean -->
+        <property name="address" ref="address"></property>
+    </bean>
+
+    <bean id="personFactory"
+        class="classes.PersonFactory">
     </bean>
 
     <bean id="address" class="classes.Address">
