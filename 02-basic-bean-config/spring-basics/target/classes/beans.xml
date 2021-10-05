@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
     default-init-method="init" default-destroy-method="destroy">
@@ -32,4 +33,9 @@
         <constructor-arg value="Monkey Lane" name="street" type="String"></constructor-arg>
         <constructor-arg value="76269" name="postCode" type="String"></constructor-arg>
     </bean>
+
+    <bean id="address2" class="classes.Address" p:street="23 Monkey Street" p:postcode="98647">
+        <property name="taxId" value="33"></property>
+    </bean>
+    
 </beans>
