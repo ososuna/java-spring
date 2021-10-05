@@ -34,8 +34,20 @@
         <constructor-arg value="76269" name="postCode" type="String"></constructor-arg>
     </bean>
 
-    <bean id="address2" class="classes.Address" p:street="23 Monkey Street" p:postcode="98647">
-        <property name="taxId" value="33"></property>
+    <bean id="address2" class="classes.Address" p:street="23 Monkey Street" p:postCode="98647">
     </bean>
-    
+
+    <bean id="basket" class="classes.FruitBasket">
+        <constructor-arg value="Monkey basket"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value>Apple</value>
+                <value>Banana</value>
+                <value>Orange</value>
+                <value>Kiwi</value>
+                <value>Pear</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
 </beans>
