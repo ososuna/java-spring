@@ -50,4 +50,30 @@
         </constructor-arg>
     </bean>
 
+    <bean id="jungle" class="classes.Jungle">
+        <property name="largest" ref="elephant"></property>
+        <property name="animals">
+            <list>
+              <ref bean="snake" />   
+              <ref bean="elephant" />   
+              <ref bean="lion" />   
+            </list>
+        </property>
+    </bean>
+
+    <bean id="lion" class="classes.Animal">
+        <property name="name" value="Alex"></property>
+        <property name="type" value="Lion"></property>
+    </bean>
+
+    <bean id="elephant" class="classes.Animal">
+        <property name="name" value="Richard"></property>
+        <property name="type" value="Elephant"></property>
+    </bean>
+    
+    <bean id="snake" class="classes.Animal">
+        <property name="name" value="Bob"></property>
+        <property name="type" value="Snake"></property>
+    </bean>
+    
 </beans>

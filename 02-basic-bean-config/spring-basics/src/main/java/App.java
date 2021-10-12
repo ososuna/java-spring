@@ -3,6 +3,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import classes.Address;
 import classes.FruitBasket;
+import classes.Jungle;
 import classes.Person;
 
 public class App 
@@ -25,6 +26,9 @@ public class App
 
         FruitBasket fb = (FruitBasket)context.getBean("basket");
         System.out.println(fb);
+
+        Jungle jungle = (Jungle)context.getBean("jungle");
+        System.out.println(jungle);
 
         ((ClassPathXmlApplicationContext)context).close();
     };
