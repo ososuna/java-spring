@@ -30,6 +30,9 @@ public class App
         Jungle jungle = (Jungle)context.getBean("jungle");
         System.out.println(jungle);
 
+        Jungle jungle2 = (Jungle)context.getBean("jungle2");
+        System.out.println(jungle2);
+
         ((ClassPathXmlApplicationContext)context).close();
     };
 

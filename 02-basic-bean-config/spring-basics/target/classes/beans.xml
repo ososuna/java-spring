@@ -75,5 +75,23 @@
         <property name="name" value="Bob"></property>
         <property name="type" value="Snake"></property>
     </bean>
+
+    <bean id="jungle2" class="classes.Jungle">
+        <property name="foods">
+            <props>
+                <prop key="gorilla">banana</prop>
+                <prop key="panda">bambu</prop>
+                <prop key="snake">eggs</prop>
+            </props>
+        </property>
+
+        <property name="animalsMap">
+            <map>
+                <entry key="lion" value-ref="lion"></entry>
+                <entry key="elephant" value-ref="elephant"></entry>
+                <entry key="snake" value-ref="snake"></entry>
+            </map>
+        </property>
+    </bean>
     
 </beans>
